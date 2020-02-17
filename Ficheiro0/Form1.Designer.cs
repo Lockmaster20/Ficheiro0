@@ -65,12 +65,14 @@
             // TextBox
             // 
             this.TextBox.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.TextBox.Cursor = System.Windows.Forms.Cursors.Default;
             this.TextBox.Location = new System.Drawing.Point(389, 12);
             this.TextBox.Name = "TextBox";
             this.TextBox.ReadOnly = true;
             this.TextBox.Size = new System.Drawing.Size(399, 426);
             this.TextBox.TabIndex = 5;
             this.TextBox.Text = "";
+            this.TextBox.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // Form1
             // 

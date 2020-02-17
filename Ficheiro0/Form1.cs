@@ -19,19 +19,24 @@ namespace Ficheiro0
             InitializeComponent();
         }
 
-        public string docPath = Application.StartupPath + "\\Resources";
+        public string docPath = Application.StartupPath + "\\Resources\\Texto.txt";
         private void Button1_Click(object sender, EventArgs e)
         {
-            TextBox.Text = File.ReadAllText(Path.Combine(docPath, "Texto.txt"));
+            TextBox.Text = File.ReadAllText(docPath);
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
             string lines = richTextBox1.Text;
-            using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, "Texto.txt")))
+            using (StreamWriter outputFile = new StreamWriter(docPath))
             {
                 outputFile.WriteLine(lines);
             }
+        }
+
+        private void TextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
