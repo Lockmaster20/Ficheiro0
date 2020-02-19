@@ -19,24 +19,25 @@ namespace Ficheiro0
             InitializeComponent();
         }
 
-        public string docPath = Application.StartupPath + "\\Resources\\Texto.txt";
+        RTFFile texto = new RTFFile();
+
+        //public string docPath = Application.StartupPath + "\\Resources\\Texto.txt";
         private void Button1_Click(object sender, EventArgs e)
         {
-            TextBox.Text = File.ReadAllText(docPath);
+            //TextBox.Text = File.ReadAllText(docPath);
+            texto.Texto = richTextBox1.Text;
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            string lines = richTextBox1.Text;
-            using (StreamWriter outputFile = new StreamWriter(docPath))
-            {
-                outputFile.WriteLine(lines);
-            }
+            //File.WriteAllText(docPath, richTextBox1.Text);
+
+            //texto.Salvar();
         }
 
-        private void TextBox_TextChanged(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
-
+            //texto.Salvar();
         }
     }
 }
