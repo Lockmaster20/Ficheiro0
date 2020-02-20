@@ -20,24 +20,20 @@ namespace Ficheiro0
         }
 
         RTFFile texto = new RTFFile();
-
-        //public string docPath = Application.StartupPath + "\\Resources\\Texto.txt";
         private void Button1_Click(object sender, EventArgs e)
         {
-            //TextBox.Text = File.ReadAllText(docPath);
-            texto.Texto = richTextBox1.Text;
+            TextBox.Text = texto.Texto;
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            //File.WriteAllText(docPath, richTextBox1.Text);
-
-            //texto.Salvar();
+            texto.Texto = richTextBox1.Text;
+            texto.Salvar();
         }
 
         private void Button3_Click(object sender, EventArgs e)
         {
-            //texto.Salvar();
+            texto.Texto = richTextBox1.Text = "";
         }
     }
 }

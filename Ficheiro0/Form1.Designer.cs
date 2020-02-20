@@ -80,7 +80,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 45);
             this.button3.TabIndex = 6;
-            this.button3.Text = "Atualizar";
+            this.button3.Text = "Apagar";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
@@ -95,6 +95,7 @@
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);

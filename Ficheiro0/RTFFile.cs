@@ -21,10 +21,14 @@ namespace Ficheiro0
             }
             set{ _Text = value; }
         }
-        /*public void Salvar
+        public void Salvar()
         {
-            get { }
-            set { File.WriteAllText(_Path, richTextBox1.Text); }
-        }*/
+            File.WriteAllText(_Path, _Text);
+        }
+
+        public void Reset()
+        {
+            _Text = "";
+        }
     }
 }
